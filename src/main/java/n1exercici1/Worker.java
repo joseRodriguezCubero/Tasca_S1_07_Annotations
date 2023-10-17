@@ -1,10 +1,16 @@
 package n1exercici1;
 
-public class Worker {
+public abstract class Worker {
 
-    private String surname;
-    private String name;
-    private final int payPerHour;
+    protected String surname;
+    protected String name;
+    protected int payPerHour;
+
+    public Worker(String surname, String name, int payPerHour) {
+        this.surname = surname;
+        this.name = name;
+        this.payPerHour = payPerHour;
+    }
 
     public String getSurname() {
         return surname;
@@ -26,13 +32,11 @@ public class Worker {
         return payPerHour;
     }
 
-    public Worker(String name, String surname, int payPerHour) {
+    public void setPayPerHour(int payPerHour) {
         this.payPerHour = payPerHour;
     }
 
-    public int calculateIncome(int numberOfHours){
-        return numberOfHours * this.payPerHour;
-    }
+    public abstract int calculateIncome();
 }
 
 

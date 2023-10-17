@@ -7,15 +7,15 @@ public class PresentialWorker extends Worker{
         super(name, surname, payPerHour);
     }
 
-    @SuppressWarnings("DeprecatedIsStillUsed")
+
     @Deprecated
     public void youAreFired(){
-        System.out.println(super.getName() + "tenemos que hablar.");
+        System.out.println(super.getName() + ", tenemos que hablar.");
     }
 
     @Override
-    public int calculateIncome(int numberOfHours){
+    public int calculateIncome(){
         int payPerHour = 15;
-        return numberOfHours * payPerHour;
+        return 14 * payPerHour;
     }
 }
