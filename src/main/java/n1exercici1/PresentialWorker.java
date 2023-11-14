@@ -2,7 +2,7 @@ package n1exercici1;
 
 public class PresentialWorker extends Worker{
 
-
+    public static float gasoline = 2.5F;
     public PresentialWorker(String name, String surname, int payPerHour) {
         super(name, surname, payPerHour);
     }
@@ -14,8 +14,8 @@ public class PresentialWorker extends Worker{
     }
 
     @Override
-    public int calculateIncome(){
+    public int calculateIncome(int hourPerMount){
         int payPerHour = 15;
-        return 14 * payPerHour;
+        return (int) (14 * payPerHour + gasoline);
     }
 }

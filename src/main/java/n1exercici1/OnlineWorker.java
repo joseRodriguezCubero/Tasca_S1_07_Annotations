@@ -2,6 +2,7 @@ package n1exercici1;
 
 public class OnlineWorker extends Worker {
 
+    public static final int TARIFAPLANA = 60;
 
     public OnlineWorker(String surname, String name, int payPerHour) {
         super(surname, name, payPerHour);
@@ -13,9 +14,10 @@ public class OnlineWorker extends Worker {
     }
 
     @Override
-    public int calculateIncome(){
-        int payPerHour = 12;
-        return 14 * payPerHour;
+    public int calculateIncome(int hours){
+        super.payPerHour = 12;
+
+        return 14 * payPerHour + TARIFAPLANA;
     }
 
 }

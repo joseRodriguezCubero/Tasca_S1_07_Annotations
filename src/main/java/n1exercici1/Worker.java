@@ -36,7 +36,10 @@ public abstract class Worker {
         this.payPerHour = payPerHour;
     }
 
-    public abstract int calculateIncome();
+    public int calculateIncome(int hours) {
+        return hours * payPerHour;
+    }
+
 }
 
 
