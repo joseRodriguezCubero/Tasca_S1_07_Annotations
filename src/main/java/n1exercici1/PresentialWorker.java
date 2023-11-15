@@ -15,7 +15,6 @@ public class PresentialWorker extends Worker{
 
     @Override
     public int calculateIncome(int hourPerMount){
-        int payPerHour = 15;
-        return (int) (14 * payPerHour + gasoline);
+        return (int) (super.calculateIncome(hourPerMount) + gasoline);
     }
 }

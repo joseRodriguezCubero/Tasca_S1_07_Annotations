@@ -15,9 +15,7 @@ public class OnlineWorker extends Worker {
 
     @Override
     public int calculateIncome(int hours){
-        super.payPerHour = 12;
-
-        return 14 * payPerHour + TARIFAPLANA;
+        return  super.calculateIncome(hours)  + TARIFAPLANA;
     }
 
 }
