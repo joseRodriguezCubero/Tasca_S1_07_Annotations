@@ -1,6 +1,6 @@
 package n1exercici1;
 
-public abstract class Worker {
+public class Worker {
 
     private int payPerHour;
     private String name;
